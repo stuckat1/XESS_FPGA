@@ -1,0 +1,2 @@
+net clk_i     loc=p43 # 12 Mhz clock input
+net blinker_0 loc=p44 # LED light
