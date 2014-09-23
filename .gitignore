@@ -96,3 +96,4 @@ blinker/xilinxsim.ini
 blinker/blinker_pad.csv
 blinker/blinker_bitgen.xwbt
 blinker/blinker.unroutes
+*.debug
