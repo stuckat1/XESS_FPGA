@@ -1,2 +1,3 @@
-net clk_i     loc=p43 # 12 Mhz clock input
-net blinker_0 loc=p44 # LED light
+NET "clk_i" CLOCK_DEDICATED_ROUTE = FALSE;
+net clk_i     loc=p43; # 12 Mhz clock input
+net blinker_o loc=p44; # LED light

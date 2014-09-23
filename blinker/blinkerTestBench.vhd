@@ -41,36 +41,36 @@ ARCHITECTURE behavior OF blinkerTestBench IS
  
     COMPONENT blinker
     PORT(
-         clk_in : IN  std_logic;
+         clk_i : IN  std_logic;
          blinker_o : OUT  std_logic
         );
     END COMPONENT;
     
 
    --Inputs
-   signal clk_in : std_logic := '0';
+   signal clk_i : std_logic := '0';
 
  	--Outputs
    signal blinker_o : std_logic;
 
    -- Clock period definitions
-   constant clk_in_period : time := 83.3 ns;
+   constant clk_i_period : time := 83.3 ns;
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: blinker PORT MAP (
-          clk_in => clk_in,
+          clk_i => clk_i,
           blinker_o => blinker_o
         );
 
    -- Clock process definitions
-   clk_in_process :process
+   clk_i_process :process
    begin
-		clk_in <= '0';
-		wait for clk_in_period/2;
-		clk_in <= '1';
-		wait for clk_in_period/2;
+		clk_i <= '0';
+		wait for clk_i_period/2;
+		clk_i <= '1';
+		wait for clk_i_period/2;
    end process;
  
 
@@ -80,7 +80,7 @@ BEGIN
       -- hold reset state for 100 ns.
       wait for 100 ns;	
 
-      wait for clk_in_period*10;
+      wait for clk_i_period*10;
 
       -- insert stimulus here 
 

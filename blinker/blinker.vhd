@@ -31,22 +31,22 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --use UNISIM.VComponents.all;
 
 entity blinker is
-    Port ( clk_in : in  STD_LOGIC;
+    Port ( clk_i : in  STD_LOGIC;
            blinker_o : out  STD_LOGIC);
 end blinker;
 
 architecture Behavioral of blinker is
-	signal cntr_r : std_logic_vector(22 downto 0) := (others=>'0');
+signal cnt_r : std_logic_vector(22 downto 0) := (others=>'0');
 begin
 
-process (clk_in) is
+process(clk_i) is
 begin
-	if rising_edge(clk_in) then
-		cntr_r <= cntr_r + 1;
-	end if;	
+  if rising_edge(clk_i) then
+    cnt_r <= cnt_r + 1;
+  end if;  
 end process;
 
-blinker_o <= cntr_r(22);
+blinker_o <= cnt_r(22);
 
 end Behavioral;
 

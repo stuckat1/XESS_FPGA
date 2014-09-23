@@ -97,3 +97,6 @@ blinker/blinker_pad.csv
 blinker/blinker_bitgen.xwbt
 blinker/blinker.unroutes
 *.debug
+blinker/blinker.bit
+blinker/blinker.bit
+*.bit
